@@ -3,44 +3,15 @@
 var passwordText = document.getElementById("password");
 var generateEl = document.getElementById("generate");
 
-var randomFunc = {
-  lower: randomLower,
-  upper: randomUpper,
-  number: randomNum,
-  symbol: randomSym
-}
-
-//Array
-
-var lowerCaseEl = "abcdefghijklmnopqrstuvwxyz";
-var upperCaseEl = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var numericEl = "0123456789";
-var symbolEl = "!@#$%^&*.,?/()";
-
-// Generate functions
-
-function randomLower() {
-  return String.lowerCaseEl[Math.floor(Math.random() * lowerCaseEl.length)]};
-
-function randomUpper() { 
-  return String.upperCaseEl[Math.floor(Math.random() * upperCaseEl.length)]};
-
-function randomNum() { 
-  return String.numericEl[Math.floor(Math.random() * numericEl.length)]};
-
-function randomSym() {
-  return String.symbolEl[Math.floor(Math.random() * symbolEl.length)]};
-
-
 // Let the prompts begin
 
 generateEl.addEventListener('click', writePassword);
 
 function writePassword() {
-  var passwordText = document.getElementById("passwordGen");
-         var passwordLength = prompt("PLEASE ENTER PASSWORD LENGTH. \nONLY CHARACTERS BETWEEN 8 - 128 ACCEPTED.");
-         if (passwordLength >= 8 && passwordLength <= 128) {
-          alert("Well Done!!! \nYour Password length is " + passwordLength + ".\nLets us continue...");
+  var passwordText = document.getElementById("password");
+         var userLength = prompt("PLEASE ENTER PASSWORD LENGTH. \nONLY CHARACTERS BETWEEN 8 - 128 ACCEPTED.");
+         if (userLength >= 8 && userLength <= 128) {
+          alert("Well Done!!! \nYour Password length is " + userLength + ".\nLets us continue...");
      
          } else {
           
@@ -92,40 +63,43 @@ function writePassword() {
         passwordText.value="Incorrect Input";
         
         }else {
-        alert("lets make a password");
-        passwordText.value = "0";
-        passwordText.value = generatePassword(passwordLength,lowMode, upMode, numMode, symMode);  
+        alert("Lets Me Skull Toss You a Password... hahaha!!");
+        passwordText.value = "";
+        passwordText.value = generatePassword(userLength,lowMode, upMode, numMode, symMode);  
         }
         };
-      
-      function generatePassword(passwordLength, passwordLength,lowMode, upMode, numMode, symMode) {
-        var passwordText = "";
+
+        function generatePassword(userLength,lowMode, upMode, numMode, symMode) {
+        var passwordText = "Your Password is \n";
         var currentPasswordLength = 0;
-        //Keeps going until condition becomes true. CharCode assigns number values to characters on keyboard keys.
-        while (currentPasswordLength < passwordLength) {
-          if ((lowMode === true) && (currentPasswordLength < passwordLength)) {
-            passwordText = passwordText + String.lowerCaseEl[Math.floor(Math.random() * lowerCaseEl.length)];
-            currentPasswordLength++;
-          }
-          if ((upMode === true) && (currentPasswordLength < passwordLength)) {
-            passwordText = passwordText + String.upperCaseEl[Math.floor(Math.random() * upperCaseEl.length)];
-            currentPasswordLength++;
-          }
-          if ((numMode === true) && (currentPasswordLength < passwordLength)) {
-            passwordText = passwordText + String.numericEl[Math.floor(Math.random() * numericEl.length)];
-            currentPasswordLength++;
-          }
-          if ((symMode === true) && (currentPasswordLength < passwordLength)) {
-            passwordText = passwordText + String.symbolEl[Math.floor(Math.random() * symbolEl.length)]};
-            currentPasswordLength++;
-          }
+
+        //Keeps going until condition becomes true.
+
+          while (currentPasswordLength < userLength) {
+            if ((lowMode === true) && (currentPasswordLength < userLength)) {
+              passwordText = passwordText + String.fromCharCode(randomNumberGenerator(98,122));
+              currentPasswordLength++;
+            }
+            if ((upMode === true) && (currentPasswordLength < userLength)) {
+              passwordText = passwordText + String.fromCharCode(randomNumberGenerator(65,90));
+              currentPasswordLength++;
+            }
+            if ((symMode === true) && (currentPasswordLength < userLength)) {
+              passwordText = passwordText + String.fromCharCode(randomNumberGenerator(33,47));
+              currentPasswordLength++;
+            }
+            if ((numMode === true) && (currentPasswordLength < userLength)) {
+              passwordText = passwordText + randomNumberGenerator(0,9);
+              currentPasswordLength++;
+            }
+          };
 
         //returns value
         return passwordText;
       }
+
       //random function passing charcode assigned charactors
       function randomNumberGenerator(lowerBound, upperBound) {
-        //returns the random number
-        return Math.floor(Math.random()*(upperBound-lowerBound+1)+lowerBound);
-      }
-    
+      //returns the random number
+      return Math.floor(Math.random()*(upperBound-lowerBound+1)+lowerBound);
+}
