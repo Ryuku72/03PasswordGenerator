@@ -98,31 +98,4 @@ function userVariables() {
       //returns the random number
       return Math.floor(Math.random()*(upperBound-lowerBound+1)+lowerBound);
 
-
-
-      // functions
-
-      function getlower() {
-        var lowerEl = "abcdefghijklmnopqrstuvwxyz";
-        return lowerEl[Math.floor(Math.random() * lowerEl.length)];
-      }
-
-      function getUpper() {
-        var upperEl = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        return upperEl[Math.floor(Math.random() * upperEl.length)];
-      }
-
-      function getNumber() {
-        var numericEl = "0123456789";
-        return numeric[Math.floor(Math.random() * numericEl.length)];
-      }
-
-      function getSymbol() {
-        var symbolEl = "~!@#$%^&*()_+=<>|/.,?";
-        return symbolEl[Math.floor(Math.random() * symbolEl.length)];
-      }
-
-
-
-
 };
