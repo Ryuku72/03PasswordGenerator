@@ -54,16 +54,20 @@ h2 {
 .hero {
     display: block;
     margin: 5%;
+    width: 40%;
     margin-left: auto;
     margin-right: auto;
-    width: 40%;
     padding: 20px;
+    position: relative;
+    bottom: 55px;
 }
 
 .textbox {
     text-align: center;
     padding: 20px;
     border: solid 1px 1px red;
+    position: absolute;
+    bottom: 80px;
 }
 
 #generate {
@@ -72,6 +76,7 @@ h2 {
     border: grey solid;
     background-color: blue;
     color: white;
+    position: relative;
 }
 
 
