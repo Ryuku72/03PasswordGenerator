@@ -66,11 +66,11 @@ function userVariables() {
         
         function generatePassword(userLength,lowMode, upMode, numMode, symMode) {
           console.log(generatePassword);
-        var passwordText = "Your Password is \n";
-        var currentPasswordLength = 0;
+          var passwordText = "Your Password is \n";
+          var currentPasswordLength = 0;
 
         for (i = 0; i < userLength; i++) {
-          if ((lowMode === true) && (currentPasswordLength < userLength)){
+          if ((lowMode === true) && (currentPasswordLength < userLength)) {
             passwordText += getLower();
             currentPasswordLength++;
           }
@@ -96,30 +96,30 @@ function userVariables() {
 
         function getLower() {
           var lowerEl = "abcdefghijklmnopqrstuvwxyz";
-          return lowerEl[Math.floor(Math.random() * lowerEl.length)];
+          return lowerEl.charAt(Math.floor(Math.random() * lowerEl.length));
         };
 
-        //console.log(getLower());
+        console.log(getLower());
 
         function getUpper() {
           var upperEl = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-          return upperEl[Math.floor(Math.random() * upperEl.length)];
+          return upperEl.charAt(Math.floor(Math.random() * upperEl.length));
         };
 
-        //console.log(getUpper());
+        console.log(getUpper());
 
         function getSymbol() {
           var symbolEl = "~!@#$%^&*()_+?:/|<>";
-          return symbolEl[Math.floor(Math.random() * symbolEl.length)];
+          return symbolEl.charAt(Math.floor(Math.random() * symbolEl.length));
         }
 
-        //console.log(getSymbol());
+        console.log(getSymbol());
 
         function getNumber() {
           var numberEl = "0123456789";
-          return numberEl[Math.floor(Math.random() * numberEl.length)];
+          return numberEl.charAt(Math.floor(Math.random() * numberEl.length));
         }
 
-        //console.log(getNumber());
+        console.log(getNumber());
 
         
