@@ -3,7 +3,9 @@
 ![GitHub contributors](https://img.shields.io/github/contributors/Ryuku72/03PasswordGenerator?style=for-the-badge)
 
 ## Random Password Generator
-__Project 03: 02 MAR 2020__
+__PROJECT03: 02 MAR 2020__
+<br>
+https://ryuku72.github.io/03PasswordGenerator/
 
 ## Aim // Introduction
 This week we started our journey into JavaScript with the use of variables, functions, alerts and the basic tools needed to complete this weeks assignment; a Random Password Generator. This assignment aim was to utilize the leasson learnt in Week 3 including Google-Fu to find the best way to design and compile a full functioning web application.
