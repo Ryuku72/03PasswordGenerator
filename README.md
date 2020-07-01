@@ -1,9 +1,9 @@
-![GitHub last commit](https://img.shields.io/github/last-commit/Ryuku72/HomeworkW3?style=for-the-badge)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/y/Ryuku72/HomeworkW3?style=for-the-badge)
-![GitHub contributors](https://img.shields.io/github/contributors/Ryuku72/HomeworkW3?style=for-the-badge)
+![GitHub last commit](https://img.shields.io/github/last-commit/Ryuku72/03PasswordGenerator?style=for-the-badge)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/y/Ryuku72/03PasswordGenerator?style=for-the-badge)
+![GitHub contributors](https://img.shields.io/github/contributors/Ryuku72/03PasswordGenerator?style=for-the-badge)
 
-## HomeWorkW3
-Homework 3: Random Password Generator
+## Random Password Generator
+__Project 03: 02 MAR 2020__
 
 ## Aim // Introduction
 This week we started our journey into JavaScript with the use of variables, functions, alerts and the basic tools needed to complete this weeks assignment; a Random Password Generator. This assignment aim was to utilize the leasson learnt in Week 3 including Google-Fu to find the best way to design and compile a full functioning web application.
